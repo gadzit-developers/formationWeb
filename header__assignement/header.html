@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header Assignment</title>
+
+
+  <!--  
+
+    these 3 lines import "baloo bhaijaan" font 
+    from google fonts.
+
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@600&display=swap" rel="stylesheet"> 
+
+
+
+  <!------------- CSS  SECTION ------------->
+  <style>
+
+    *{
+
+      margin: 0;
+      padding: 0;
+
+      box-sizing: border-box;
+    }
+
+    body{
+      height: 100vh;
+      width: 100vw;
+
+      font-family: 'Baloo Bhaijaan 2', cursive;
+    }
+
+
+    .header{
+      width: 100%;
+      height: 100px;
+
+
+      background: #ADD4D3;
+
+    }
+
+    .logo{
+      height: 100%;
+      padding: 25px;
+
+    }
+
+
+    /* 
+      Here I used the float property (for .nav) it's an old way  
+      To define layouts in Css there are different ways u can use 
+      anyone u found or looked for you re free.
+    */
+
+    .nav{
+      float: right;
+
+      height: 100%;
+      padding-top: 35px;
+    }
+
+    .links{
+      font-size: 20px;
+
+      color: #333237;
+      text-decoration: none;
+
+      margin-right: 100px;
+    }
+
+    /*   
+      This is a teaser of what you will learn in css :
+        (Simple Animations and some responsive code for phone's view)
+
+        So ignore this Css Section code and focus on its purpose
+        (unless you wanna look for that by yourself for the while)
+    */
+
+    .links,
+    .links:visited,
+    .links:link{
+      display: inline-block;
+      transition: transform .4s ease-out;
+    }
+    .links:hover{
+      transform: translateY(-3px) skewY(-5deg) scale(1.07);
+      box-shadow: 0 3px 10px black;
+      color: #F68859;
+    }
+
+    .links:active{
+      transform: translateY(-3px) scale(.98);
+    }
+
+    @media (max-width: 1000px) {
+
+      .links{
+        font-size: 18px;
+        margin-right: 80px;
+      }
+      
+    }
+
+    @media (max-width: 800px) {
+
+      .links{
+        margin-right: 60px;
+        font-size: 17px;
+      }
+
+    }
+
+    @media (max-width: 700px) {
+
+      .nav{
+        display: none;
+      }
+
+    }
+
+  </style>
+
+<!--------------    END  CSS  ------------->
+
+
+</head>
+<body>
+  
+  <div class="header">
+
+    <img class="logo" src="logo.svg" alt="">
+
+    <div class="nav">
+
+      <a href="#" class="links">Home</a>
+      <a href="#" class="links">About us</a>
+      <a href="#" class="links">Services</a>
+
+    </div>
+
+  </div>
+</body>
+</html>
